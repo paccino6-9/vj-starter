@@ -42,6 +42,19 @@ Use the helper script to choose live window vs PNG vs MP4 output:
 ./Core/interactive_launch.py
 ```
 
+## Multiview + joystick mixer
+
+A separate host shows 9 vignettes (mandalas, text FX, faux video + glow, point clouds, wireframe) and a joystick-driven mixer window:
+
+```bash
+./Core/run_grid.sh
+```
+
+- Joystick (en haut à droite) interpole entre les 4 flux des coins pour la fenêtre “Mix Output”.
+- La boucle tourne en continu tant que les fenêtres restent ouvertes.
+- Presets par vignette : appuie sur les touches `1`..`9` pour cycler le preset de la vignette correspondante (mandala, texte, vidéo, nuée de points, fil de fer, etc.).
+- Menus au-dessus de chaque vignette : choisis la catégorie (Video / Generatif / Texte) et le preset (incluant un preset “Aucun” pour écran noir). Les presets vidéo prennent une séquence par vignette : par défaut `Media/Tile1`…`Media/Tile9` (générés avec des placeholders), mais tu peux surcharger par vignette via des dossiers perso (noms `frame_0000.png`, etc.) en fixant des env vars `VJ_TILE1_SEQ`, `VJ_TILE2_SEQ`, …, `VJ_TILE9_SEQ`. Chaque vignette reste un player indépendant ; seul “Mix Output” montre le mélange joystick.
+
 ## Params JSON format
 
 A flat object keyed by `param_id`:

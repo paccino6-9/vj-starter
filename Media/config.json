@@ -1,0 +1,48 @@
+{
+  "videos": [
+    {
+      "tile": 1,
+      "path": "Media/Tile1"
+    },
+    {
+      "tile": 2,
+      "path": "Media/Tile2"
+    },
+    {
+      "tile": 3,
+      "path": "Media/Tile3"
+    },
+    {
+      "tile": 4,
+      "path": "Media/Tile4"
+    },
+    {
+      "tile": 5,
+      "path": "Media/Tile5"
+    },
+    {
+      "tile": 6,
+      "path": "Media/Tile6"
+    },
+    {
+      "tile": 7,
+      "path": "Media/Tile7"
+    },
+    {
+      "tile": 8,
+      "path": "Media/Tile8"
+    },
+    {
+      "tile": 9,
+      "path": "Media/Tile9"
+    }
+  ],
+  "text_presets": [
+    "VOYAGE",
+    "ENERGY",
+    "PULSE",
+    "SPECTRE",
+    "NEON",
+    "ECHO"
+  ]
+}

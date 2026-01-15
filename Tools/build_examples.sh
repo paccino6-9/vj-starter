@@ -22,6 +22,8 @@ FRAMEWORKS=(
   -framework Metal
   -framework Foundation
   -framework QuartzCore
+  -framework CoreGraphics
+  -framework CoreText
 )
 
 echo "[build] TranceGlow plugin..."
@@ -29,6 +31,18 @@ $CXX "${CXXFLAGS[@]}"   "$ROOT_DIR/Plugins/Examples/TranceGlow/TranceGlow.mm"   
 
 echo "[build] MandalaGen plugin..."
 $CXX "${CXXFLAGS[@]}"   "$ROOT_DIR/Plugins/Examples/MandalaGen/MandalaGen.mm"   -dynamiclib -o "$PLUGINS_OUT/libMandalaGen.dylib"   "${FRAMEWORKS[@]}"
+
+echo "[build] TextFX plugin..."
+$CXX "${CXXFLAGS[@]}"   "$ROOT_DIR/Plugins/Examples/TextFX/TextFX.mm"   -dynamiclib -o "$PLUGINS_OUT/libTextFX.dylib"   "${FRAMEWORKS[@]}"
+
+echo "[build] VideoSim plugin..."
+$CXX "${CXXFLAGS[@]}"   "$ROOT_DIR/Plugins/Examples/VideoSim/VideoSim.mm"   -dynamiclib -o "$PLUGINS_OUT/libVideoSim.dylib"   "${FRAMEWORKS[@]}"
+
+echo "[build] PointCloud plugin..."
+$CXX "${CXXFLAGS[@]}"   "$ROOT_DIR/Plugins/Examples/PointCloud/PointCloud.mm"   -dynamiclib -o "$PLUGINS_OUT/libPointCloud.dylib"   "${FRAMEWORKS[@]}"
+
+echo "[build] Wireframe plugin..."
+$CXX "${CXXFLAGS[@]}"   "$ROOT_DIR/Plugins/Examples/Wireframe/Wireframe.mm"   -dynamiclib -o "$PLUGINS_OUT/libWireframe.dylib"   "${FRAMEWORKS[@]}"
 
 echo ""
 echo "✅ Done."
